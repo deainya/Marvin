@@ -9,7 +9,7 @@ var app         = new TelegramBot(config.bot_token);
 // Вспомогательные функции
 // Возвращает случайное число между min (включая) и max (не включая)
 function getRandom(min, max) {
-  return Math.random() * (max - min) + min;
+  return Math.floor(Math.random() * (max - min) + min);
 }
 
 // Задаём реакцию бота на обязательные команды /start и /help
