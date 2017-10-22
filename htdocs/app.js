@@ -36,12 +36,12 @@ app.on('text', function(ctx) {
   Days.push("sunday"); // Добавляем элемент в хвост массива
 
   var hi = /йо|привет|здарова|здравствуйте|hi|hey|hello/.test(txt);
-  var yo = /мотивашка|мотивашку|как дела|how are you/.test(txt);
+  var yo = /мотивашка|мотивашку|мотивируй|как дела|how are you/.test(txt);
 
   if (hi) {
     ctx.reply( marvin.citations[2] );
   } else if (yo) {
-    ctx.reply( marvin.citations[getRandom(min, max)] );
+    ctx.reply( marvin.citations[getRandom(4, 13)] );
   } else {
     // Ответ бота поумолчанию
     ctx.reply( marvin.citations[3] );
